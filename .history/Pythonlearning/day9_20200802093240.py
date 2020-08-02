@@ -1,0 +1,18 @@
+# 接上一天的第九章
+#   静态方法和类方法：
+#   定义和表示：静态方法和类方法分别包装在staticmethod和classmethod类的对象中。
+#   静态方法的定义中没有参数self，可直接通过类调用。类方法的定义中包含类似self的参数，
+#   通常被命名为cls。对于类方法，也可通过对象直接调用，但参数cls将自动关联到类。如下
+
+class Myclass:
+    def smeth():
+        print('This is a static method')
+        smeth = staticmethod(smeth)
+
+    def cmeth(cls):#类方法的特有参数
+        print('This is a class method of ', cls)
+        cmeth = classmethod(cmeth)
+
+#   像这样手工包装和替换方法有点繁琐。引入了一种名为装饰器的新方法，可用于像这样包装方法.
+#   (实际上,装饰器可用于包含任何可调用的对象,并且可用于方法和函数)可指定一个或多个装饰器
+#   ,为此可在方法(或函数)前面使用运算符@列出这些装饰器()
