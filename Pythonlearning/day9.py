@@ -38,5 +38,3 @@ Myclass.cmeth()
 #   __setattr(self,name,value):试图给属性赋值时自动调用
 #   __delattr__(self,name):试图删除属性时自动调用
 #   相比于函数property,这些魔法方法使用起来要棘手些(从某种程度上说,效率也更低),
-
-###
