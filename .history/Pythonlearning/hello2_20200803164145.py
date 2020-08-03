@@ -9,8 +9,6 @@ def hello():
 def test():
     hello()
 
-def test2():
-    hello()
 
 if __name__ == '__main__':
     test()
